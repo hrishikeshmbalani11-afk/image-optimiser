@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+temp/uploads/*
+temp/processed/*
+!temp/uploads/.gitkeep
+!temp/processed/.gitkeep

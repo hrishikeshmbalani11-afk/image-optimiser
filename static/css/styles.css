@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f8fb;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.subtext {
+  margin-top: 0;
+  color: #4b5563;
+}
+
+.dropzone {
+  border: 2px dashed #94a3b8;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.dropzone.active {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.status {
+  min-height: 1.5rem;
+  margin: 0.75rem 0 1rem;
+  color: #065f46;
+}
+
+.status.error {
+  color: #b91c1c;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.control input,
+.control select {
+  width: 100%;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.params-preview {
+  margin: 0 0 1rem;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.actions {
+  margin-bottom: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.panes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pane {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+#before-image,
+#after-image {
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+}
+
+.placeholder,
+.placeholder-box {
+  color: #6b7280;
+}
+
+.placeholder-box {
+  min-height: 220px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.download-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.meta {
+  margin-top: 0.5rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .panes {
+    grid-template-columns: 1fr;
+  }
+}
