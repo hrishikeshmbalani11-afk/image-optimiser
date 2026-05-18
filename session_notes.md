@@ -279,3 +279,14 @@ Implemented advanced features
 #### 5. UX behavior refinement
 - Removed noisy always-on summary lines.
 - Output now focuses on meaningful deltas only, making it easier to understand what the chosen settings actually changed.
+
+## SESSION 3:
+
+### Deployment update
+- Deployed successfully on Render.
+- Live app URL: https://flask-image-optimizer-60a9.onrender.com/
+- Updated the Render startup command to use the Flask app factory in both deployment entrypoints:
+  - `render.yaml`
+  - `Procfile`
+- Startup command now runs:
+  - `gunicorn "app:create_app()" --bind 0.0.0.0:$PORT`

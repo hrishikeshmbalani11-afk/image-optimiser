@@ -37,4 +37,6 @@ Open: `http://127.0.0.1:5000`
 
 ## Deployment
 
-- `Procfile` and `render.yaml` are included for Render deployment.
+- Deployed on Render: https://flask-image-optimizer-60a9.onrender.com/
+- `Procfile` and `render.yaml` use the Flask app factory startup:
+  `gunicorn "app:create_app()" --bind 0.0.0.0:$PORT`
